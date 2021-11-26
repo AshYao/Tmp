@@ -28,5 +28,9 @@ jobs:
         run: |
           mkdir -p path/to/dir-1
           echo "Lorem ipsum dolor sit amet" > path/to/dir-1/file1.txt
-      
-
+                  
+      - name: 'Upload artifact #1'
+        uses: actions/upload-artifact@v2
+        with:
+          name: 'Artifact-A'
+          path: path/to/dir-1/file1.txt
